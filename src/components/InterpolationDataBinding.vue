@@ -13,15 +13,17 @@ export default {
       arr: [1, 2, 3, "VueJs", "JavaScript"], //arr is being referenced in the h2 tag using the double curly braces to display the value
       obj: { val: "Frameworks", val2: "programming" }, //obj is being referenced in the h3 tag using the double curly braces to display the value
       url: "https://www.google.com", //url is being referenced in the anchor tag and is bound to the href attribute using v-bind
+      courseGoalA: "Finish the course!",
+      courseGoalB: "Move on to Nuxt!",
     };
   },
   methods: {
     courseGoals() {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
-        return "Learn Vue!";
+        return this.courseGoalA;
       } else {
-        return "Start on Nuxt!";
+        return this.courseGoalB;
       }
     },
   },
