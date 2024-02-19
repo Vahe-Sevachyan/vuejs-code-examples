@@ -1,9 +1,11 @@
 <script setup>
 import InterpolationDataBinding from "./components/InterpolationDataBinding.vue";
+import Events from "./components/Events.vue";
 </script>
 
 <template>
   <InterpolationDataBinding />
+  <Events />
 </template>
 
 <style scoped>
