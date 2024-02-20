@@ -2,9 +2,16 @@
   <div>
     <button v-on:click="add()">Add</button>
     <button v-on:click="subtract()">Subtract</button>
-    <button v-on:click="double()">Double</button>
-    <input v-on:input="setName" type="text" />
+    <button v-on:click="double()">Double</button><br />
+    <input
+      v-on:input="setName"
+      type="text"
+      placeholder="enter number to double"
+    />
     <p>Count is: {{ counter }}</p>
+
+    <input v-on:input="setName" type="text" placeholder="Enter name..." />
+    <p>Name is: {{ name }}</p>
   </div>
 </template>
 <script>
@@ -13,6 +20,7 @@ export default {
     return {
       counter: 0,
       doubleVal: 0,
+      name: "",
     };
   },
   methods: {
@@ -29,7 +37,13 @@ export default {
     double() {
       this.counter = this.doubleVal * 2;
     },
+    setName(event) {
+      this.name = event.target.value;
+    },
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+button {
+}
+</style>
