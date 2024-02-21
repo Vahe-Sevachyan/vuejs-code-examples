@@ -1,11 +1,13 @@
 <script setup>
 import InterpolationDataBinding from "./components/InterpolationDataBinding.vue";
 import Events from "./components/Events.vue";
+import Counter from "./components/Counter.vue";
 </script>
 
 <template>
   <InterpolationDataBinding />
   <Events />
+  <Counter />
 </template>
 
 <style scoped>
